@@ -1,0 +1,14 @@
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\bin\Debug\net7.0\myApp.exe
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\bin\Debug\net7.0\myApp.deps.json
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\bin\Debug\net7.0\myApp.runtimeconfig.json
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\bin\Debug\net7.0\myApp.dll
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\bin\Debug\net7.0\myApp.pdb
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.AssemblyInfoInputs.cache
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.AssemblyInfo.cs
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.csproj.CoreCompileInputs.cache
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.dll
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\refint\myApp.dll
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.pdb
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\myApp.genruntimeconfig.cache
+C:\Users\ÖMER\Desktop\MyProjectFolder\myApp\myApp\obj\Debug\net7.0\ref\myApp.dll
