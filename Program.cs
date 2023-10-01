@@ -4,8 +4,8 @@ using System.Text;
 
 namespace myApp
 {
-    class Program{
-        static void Main(string[] args){
+    public static class Program{
+        public static void Main(string[] args){
          
        /*  int a =5;
         int b= 5;
@@ -104,10 +104,55 @@ namespace myApp
             Console.WriteLine(item);
         }
 
- */
+ */     
+        /* static string writeName(string name){
+            return name;
+        }
         
+        Console.WriteLine(writeName("TestName")); */
+       
+       /*  Console.WriteLine("Please enter first number");
+        double num = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Please enter second number");
+        double num2 = Convert.ToDouble(Console.ReadLine());
         
+        Console.WriteLine(num+num2);   */
+       
+       
+        /* Console.WriteLine("Please enter first number");
+        string? num = Console.ReadLine();
+        Console.WriteLine("Please enter second number");
+        string? num2 = Console.ReadLine();
+        
+        Console.WriteLine(Convert.ToDouble(num)+Convert.ToDouble(num2));     */ 
 
+        /* int i = 0;
+        string s = "123";
+        i =int.Parse(s);
+        i = Convert.ToInt32(s);
+        Console.WriteLine(i.GetType()); */
+
+
+
+        Random rand = new Random();
+        int rndNum= rand.Next(100);
+        
+        while(true){
+            int i=0;
+            Console.WriteLine("Please enter a number");
+            string? s= Console.ReadLine();
+            i= Convert.ToInt32(s);
+            if(rndNum==i){
+                Console.WriteLine("WELL DONE, YOU GUESS THE RIGHT NUMBER");
+                break;
+            }
+            else if(rndNum<i){
+                Console.WriteLine("High");
+            }
+            else{
+                Console.WriteLine("Low");
+            }
+        }
 
         }
     }
