@@ -133,10 +133,10 @@ namespace myApp
         Console.WriteLine(i.GetType()); */
 
 
-
-        Random rand = new Random();
+    
+        /* Random rand = new Random();
         int rndNum= rand.Next(100);
-        
+        //Console.WriteLine(rndNum);
         while(true){
             int i=0;
             Console.WriteLine("Please enter a number");
@@ -147,12 +147,26 @@ namespace myApp
                 break;
             }
             else if(rndNum<i){
-                Console.WriteLine("High");
+                Console.WriteLine("Lower");
             }
             else{
-                Console.WriteLine("Low");
+                Console.WriteLine("Higher");
             }
-        }
+        } */
+
+
+
+        /* int number=99;
+        Console.WriteLine($"number is :{number}");
+        Add(ref number,5);
+        Console.WriteLine($"number is :{number}");
+        static int  Add(ref int i,int j) {
+            i=40;
+            return i + j;
+        } */
+
+        
+        
 
         }
     }
