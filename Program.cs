@@ -166,8 +166,24 @@ namespace myApp
         } */
 
         
-        
+       /*  string sentence ="My name is test sentence";
+        var sentenceCloned = sentence.Clone();
+        sentence = "Changed to see whether cloned sentence changes or not";
+        Console.WriteLine(sentenceCloned.GetType());
+        Console.WriteLine(sentenceCloned);
+        //Test sentence is not change because it has new ref value 
+        Console.WriteLine(sentence.IndexOf(" "));
+        Console.WriteLine(sentence.LastIndexOf(" "));
+        string subString = sentence.Substring(0,7);
+         Console.WriteLine(subString);
+        Console.WriteLine(sentence);
+        //sentence=sentence.Replace(" ","");
+        Console.WriteLine(sentence); 
+        subString=sentence.Remove(10,4);
+        Console.WriteLine(subString); */
 
+        
+        
         }
     }
 }
