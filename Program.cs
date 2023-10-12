@@ -182,8 +182,25 @@ namespace myApp
         subString=sentence.Remove(10,4);
         Console.WriteLine(subString); */
 
-        
+        Customer person = new Customer{
+           Id=1,
+           Name="Thomas",
+           City="Magnesia",
+           LastName="Chandler" 
+        } ;
         
         }
     }
+
+        //InClass props 
+    class Customer{
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public string City { get; set; }
+
+
+    }
+
+    
 }
