@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Internal;
+using System;
 using System.Collections;
 using System.Text;
 
@@ -184,11 +185,13 @@ namespace myApp
 
         Customer person = new Customer{
            Id=1,
-           Name="Thomas",
+           Name="Thomas", //this provide by setters if person.Id used then getters is used
            City="Magnesia",
            LastName="Chandler" 
         } ;
-        
+        Console.WriteLine(person.Name);
+        Console.WriteLine("------------");
+        Console.WriteLine(person.City);
         }
     }
 
