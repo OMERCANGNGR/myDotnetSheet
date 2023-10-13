@@ -1,5 +1,4 @@
-﻿using Internal;
-using System;
+﻿using System;
 using System.Collections;
 using System.Text;
 
@@ -198,9 +197,9 @@ namespace myApp
         //InClass props 
     class Customer{
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public string City { get; set; }
+        public string? Name { get; set; }
+        public string? LastName { get; set; }
+        public string? City { get; set; }
 
 
     }
