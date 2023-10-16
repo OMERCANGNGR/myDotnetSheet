@@ -195,13 +195,19 @@ namespace myApp
     }
 
         //InClass props 
-    class Customer{
+    class Customer:IPerson {
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? LastName { get; set; }
         public string? City { get; set; }
 
 
+    }
+    interface IPerson
+    {
+        int Id { get; set; }
+        string? Name { get; set; }
+        string? LastName { get; set; }
     }
 
     
