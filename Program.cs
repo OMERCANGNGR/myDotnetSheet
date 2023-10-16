@@ -191,7 +191,12 @@ namespace myApp
         Console.WriteLine(person.Name);
         Console.WriteLine("------------");
         Console.WriteLine(person.City);
+        
+        PeopleList pList = new PeopleList();
+        pList.Add(new Customer());
+
         }
+
     }
 
         //InClass props 
@@ -201,6 +206,36 @@ namespace myApp
         public string? LastName { get; set; }
         public string? City { get; set; }
 
+        public void Add(){
+            Console.WriteLine("Customer added");
+        }
+        public void Update(){
+            Console.WriteLine("Customer updated");
+
+        }
+        public void Delete(){
+            Console.WriteLine("Customer deleted");
+
+        }
+
+    }
+    class Manager:IPerson {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? LastName { get; set; }
+        public string? City { get; set; }
+
+        public void Add(){
+            Console.WriteLine("Manager added");
+        }
+        public void Update(){
+            Console.WriteLine("Manager updated");
+
+        }
+        public void Delete(){
+            Console.WriteLine("Manager deleted");
+
+        }
 
     }
     interface IPerson
@@ -208,7 +243,16 @@ namespace myApp
         int Id { get; set; }
         string? Name { get; set; }
         string? LastName { get; set; }
+
+        void Add();
+        void Update();
+        void Delete();
     }
 
+    class PeopleList{
+        public void Add(IPerson person){
+            person.Add();
+        }
+    }
     
 }
