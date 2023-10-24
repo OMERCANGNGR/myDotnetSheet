@@ -182,7 +182,7 @@ namespace myApp
         subString=sentence.Remove(10,4);
         Console.WriteLine(subString); */
 
-        Customer person = new Customer{
+        /* Customer person = new Customer{
            Id=1,
            Name="Thomas", //this provide by setters if person.Id used then getters is used
            City="Magnesia",
@@ -193,14 +193,27 @@ namespace myApp
         Console.WriteLine(person.City);
         
         PeopleList pList = new PeopleList();
-        pList.Add(new Customer());
+        pList.Add(new Customer()); */
+
+
+
 
         }
 
     }
-
+        class Database{
+            public virtual void Connect(){
+                Console.WriteLine("Connected");
+            }
+        }
+        class MySql : Database{
+        public override void Connect()
+        {
+            Console.WriteLine("Connected TO MySql");
+        }
+    }
         //InClass props 
-    class Customer:IPerson {
+   /*  class Customer:IPerson {
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? LastName { get; set; }
@@ -254,5 +267,7 @@ namespace myApp
             person.Add();
         }
     }
-    
+     */
+
+    // A class can get multiple interfaces but not a parent class it can have only one parent class!!!
 }
