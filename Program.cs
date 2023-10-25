@@ -201,17 +201,34 @@ namespace myApp
         }
 
     }
+
+        class Classes{
+            string Name { get; set; }
+            int Id { get; set; }
+            int Age { get; set; }
+            public Classes(string Name, int Id, int Age)
+            { 
+              this.Name = Name;
+              this.Id = Id;
+              this.Age = Age;  
+            }
+        }
         class Database{
             public virtual void Connect(){
                 Console.WriteLine("Connected");
             }
         }
         class MySql : Database{
+
+            
         public override void Connect()
         {
             Console.WriteLine("Connected TO MySql");
         }
-    }
+    }   
+
+    //protected modifiers can bu used with inherited classes but private variables not
+
         //InClass props 
    /*  class Customer:IPerson {
         public int Id { get; set; }
