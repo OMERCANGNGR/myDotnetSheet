@@ -195,8 +195,7 @@ namespace myApp
         PeopleList pList = new PeopleList();
         pList.Add(new Customer()); */
 
-        LogManager logging = new LogManager();
-        logging._logger= new DbLogger();
+        LogManager logging = new LogManager(new FileLogger());
         logging.Add();
 
         }
@@ -222,6 +221,11 @@ namespace myApp
 
         class LogManager{
             public ILogger? _logger { get; set; }
+
+            public LogManager(ILogger logger)
+            {
+                _logger = logger;
+            }
             public void Add()
             {
                 Console.WriteLine("Added");
