@@ -195,96 +195,143 @@ namespace myApp
         PeopleList pList = new PeopleList();
         pList.Add(new Customer()); */
 
-
-
+        LogManager logging = new LogManager();
+        logging._logger= new DbLogger();
+        logging.Add();
 
         }
 
     }
 
-        class Classes{
-            string Name { get; set; }
-            int Id { get; set; }
-            int Age { get; set; }
-            public Classes(string Name, int Id, int Age)
-            { 
-              this.Name = Name;
-              this.Id = Id;
-              this.Age = Age;  
-            }
-        }
-        class Database{
-            public virtual void Connect(){
-                Console.WriteLine("Connected");
-            }
-        }
-        class MySql : Database{
+        class TestClass{
+            private int _password { get; set; } 
+            private int _id { get; set; }
 
-            
-        public override void Connect()
-        {
-            Console.WriteLine("Connected TO MySql");
+            public TestClass(int password, int id)
+            {
+                _password = password;
+                _id = id;
+            }
         }
-    }   
+
+        class ExtendedClass : TestClass{
+            public ExtendedClass(int pass,int idNum) : base (pass, idNum){
+                        
+            }
+        }
+
+        class LogManager{
+            public ILogger? _logger { get; set; }
+            public void Add()
+            {
+                Console.WriteLine("Added");
+                _logger?.Log();
+            }
+        }
+        interface ILogger
+        {
+            public void Log();
+        }
+
+        class DbLogger : ILogger
+        {
+        public void Log()
+            {
+            Console.WriteLine("Logged Db");
+            }
+        }
+        class FileLogger : ILogger
+        {
+        public void Log()
+             {
+            Console.WriteLine("Logged File");
+             }
+            }
+
+
+    /*   class Classes{
+          string Name { get; set; }
+          int Id { get; set; }
+          int Age { get; set; }
+          public Classes(string Name, int Id, int Age)
+          { 
+            this.Name = Name;
+            this.Id = Id;
+            this.Age = Age;  
+          }
+      }
+      class Database{
+          public virtual void Connect(){
+              Console.WriteLine("Connected");
+          }
+      }
+      class MySql : Database{
+
+
+      public override void Connect()
+      {
+          Console.WriteLine("Connected TO MySql");
+      }
+  }    */
 
     //protected modifiers can bu used with inherited classes but private variables not
 
-        //InClass props 
-   /*  class Customer:IPerson {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? LastName { get; set; }
-        public string? City { get; set; }
+    //InClass props 
+    /*  class Customer:IPerson {
+         public int Id { get; set; }
+         public string? Name { get; set; }
+         public string? LastName { get; set; }
+         public string? City { get; set; }
 
-        public void Add(){
-            Console.WriteLine("Customer added");
-        }
-        public void Update(){
-            Console.WriteLine("Customer updated");
+         public void Add(){
+             Console.WriteLine("Customer added");
+         }
+         public void Update(){
+             Console.WriteLine("Customer updated");
 
-        }
-        public void Delete(){
-            Console.WriteLine("Customer deleted");
+         }
+         public void Delete(){
+             Console.WriteLine("Customer deleted");
 
-        }
+         }
 
-    }
-    class Manager:IPerson {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? LastName { get; set; }
-        public string? City { get; set; }
+     }
+     class Manager:IPerson {
+         public int Id { get; set; }
+         public string? Name { get; set; }
+         public string? LastName { get; set; }
+         public string? City { get; set; }
 
-        public void Add(){
-            Console.WriteLine("Manager added");
-        }
-        public void Update(){
-            Console.WriteLine("Manager updated");
+         public void Add(){
+             Console.WriteLine("Manager added");
+         }
+         public void Update(){
+             Console.WriteLine("Manager updated");
 
-        }
-        public void Delete(){
-            Console.WriteLine("Manager deleted");
+         }
+         public void Delete(){
+             Console.WriteLine("Manager deleted");
 
-        }
+         }
 
-    }
-    interface IPerson
-    {
-        int Id { get; set; }
-        string? Name { get; set; }
-        string? LastName { get; set; }
+     }
+     interface IPerson
+     {
+         int Id { get; set; }
+         string? Name { get; set; }
+         string? LastName { get; set; }
 
-        void Add();
-        void Update();
-        void Delete();
-    }
+         void Add();
+         void Update();
+         void Delete();
+     }
 
-    class PeopleList{
-        public void Add(IPerson person){
-            person.Add();
-        }
-    }
-     */
+     class PeopleList{
+         public void Add(IPerson person){
+             person.Add();
+         }
+     }
+      */
 
     // A class can get multiple interfaces but not a parent class it can have only one parent class!!!
 }
