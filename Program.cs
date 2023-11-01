@@ -198,6 +198,8 @@ namespace myApp
         LogManager logging = new LogManager(new FileLogger());
         logging.Add();
 
+        ExtendedClass test= new ExtendedClass(212321321,23);
+        test.Add();
         }
 
     }
@@ -211,11 +213,21 @@ namespace myApp
                 _password = password;
                 _id = id;
             }
+            public void testFunction(){
+                Console.WriteLine(_password+" "+_id);
+            }
         }
 
         class ExtendedClass : TestClass{
+           
+            
             public ExtendedClass(int pass,int idNum) : base (pass, idNum){
                         
+            }
+
+            public void Add(){
+                Console.WriteLine("Added");
+                testFunction();
             }
         }
 
